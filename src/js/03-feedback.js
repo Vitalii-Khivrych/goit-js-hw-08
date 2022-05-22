@@ -23,16 +23,14 @@ function onSaveFormField(evt) {
 function onFormSubmit(evt) {
   evt.preventDefault();
 
-  console.log(evt.currentTarget.elements.email.value);
-
   const { email, message } = evt.currentTarget.elements;
 
   if (email.value === '' || message.value === '') {
     return console.log('Будь ласка заповнити усі поля');
   }
 
-  const sentDataValues = { email: email.value, message: message.value };
-  console.log(sentDataValues);
+  // const sentDataValues = { email: email.value, message: message.value };
+  // console.log(sentDataValues);
 
   console.log(formData);
 
