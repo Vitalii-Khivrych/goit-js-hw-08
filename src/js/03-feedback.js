@@ -6,7 +6,7 @@ const refs = {
 
 const SAVE_DATA_KEY = 'feedback-form-state';
 
-const formData = {};
+let formData = {};
 
 populateFormFields();
 
@@ -34,9 +34,11 @@ function onFormSubmit(evt) {
 
   console.log(formData);
 
-  evt.currentTarget.reset();
+  refs.form.reset();
 
   localStorage.removeItem(SAVE_DATA_KEY);
+
+  formData = {};
 }
 
 function populateFormFields() {
